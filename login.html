@@ -1,0 +1,65 @@
+
+<!--kya tumhe yad he -->
+<!-- <html> -->
+	<!-- <head> -->
+		<!-- <script> -->
+			<!-- function passcheck() { -->
+				<!-- var a; -->
+				<!-- a=document.getElementById("pass").value; -->
+				<!-- if(a=="chahatjain") -->
+					<!-- window.alert("wright password"); -->
+				<!-- else -->
+					<!-- window.alert("wrong password"); -->
+			<!-- } -->
+		<!-- </script> -->
+	<!-- </head> -->
+	<!-- <body> -->
+		<!-- <table border=1> -->
+			<!-- <tr> -->
+				<!-- <td> -->
+					<!-- <input type="text" id="pass" value=""> -->
+				<!-- </td> -->
+				<!-- <td> -->
+					<!-- <button onclick="passcheck()">click</button> -->
+				<!-- </td> -->
+		<!-- </table> -->
+	<!-- </body> -->
+<!-- </html> -->
+
+
+<html>
+<head>
+	<link rel="stylesheet" href="login.css">
+	<title>Login</title>
+	<script>
+		function show(){
+			var x;
+			x=document.getElementById("pass");
+			if(x.type === "password"){
+				x.type="text";
+			}
+			else{
+				x.type="password";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="login">
+		<h2>Login</h2>
+		<form method="POST" action="login.php">
+			<div class="user">
+				<input type="text" name="t1" required="">
+				<label>User Name Or Email Id</label>
+			</div>
+			<div class="user">
+				<input type="password"  id="pass" name="t2" required="">
+				<label>Password</label>
+				<input type="checkbox" id="check" onclick="show()">
+			</div>
+			<input type="submit" name="btn" value="login" class="button"></input>
+			<a href="signup.html" class="signup" >SignUp</a>
+		</form>
+	</div>
+</body>
+</html>

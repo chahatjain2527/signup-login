@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link rel="stylesheet" href="signup.css">
+	<title>Sign Up</title>
+	<script>
+		function show(){
+			var x;
+			x=document.getElementById("pass");
+			if(x.type === "password"){
+				x.type="text";
+			}
+			else{
+				x.type="password";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="signup">
+		<h2>Sign Up</h2>
+		<form method="POST" action="signup.php">
+			<div class="user">
+				<input type="text" name="t1" required="">
+				<label>Enter Email Id</label>
+			</div>
+			<div class="user">
+				<input type="text" name="t2" required="">
+				<label>Enter User Name</label>
+			</div>
+			<div class="user">
+				<input type="password" id="pass" name="t3" required="">
+				<label>Enter Password</label>
+				<input type="checkbox" id="check" onclick="show()">
+			</div>
+			<input type="submit" value="Sign Up" name="btn" class="button"></input>
+			<a href="login.html" class="login" >login</a>
+		</form>
+	</div>
+</body>
+</html>
